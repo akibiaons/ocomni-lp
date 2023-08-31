@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { BenefitsCarousel } from "./benefits-carousel";
 
 export function Carousel() {
   const img = [
@@ -23,19 +24,12 @@ export function Carousel() {
 
   return (
     <>
-      <div className="relative flex flex-col items-center pb-4 bg-slate-50 hover:bg-slate-400 hover:cursor-pointer">
+      <div className="relative flex flex-col items-center pb-4 bg-slate-50 hover:bg-slate-100 hover:cursor-pointer">
         <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4">
-          <img src={img[activeSlide]} className="w-full h-full" />
+          <img src={img[activeSlide]} />
         </div>
-        <div className="flex justify-center mt-4">
-          {img.map((_, index) => (
-            <div
-              key={index}
-              className={`h-2 w-2 mx-1 rounded-full ${
-                index === activeSlide ? "bg-gray-300" : "bg-white"
-              }`}
-            ></div>
-          ))}
+        <div className="lg:hidden block">
+          <BenefitsCarousel />
         </div>
       </div>
     </>

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Carousel } from "@/components/carousel";
 import { BenefitsCarousel } from "@/components/benefits-carousel";
 
@@ -14,13 +16,14 @@ export function Body() {
           </p>
         </div>
       </div>
-      <div className="pt-20 grid grid-cols-8 pl-8">
-        <div className="col-start-1 col-end-5 border-2 border-blue-600">
+      <div className="lg:pt-20 lg:grid lg:grid-cols-8 lg:pl-8">
+        <div className="col-start-1 col-end-5 lg:col-start-2 lg:col-end-4 border-2 border-blue-600">
           <div>
             <Carousel />
           </div>
         </div>
-        {/* Below will be the benefit driven content peices that pop up at the speed of the carousel cuts */}
+        {/* Below will be the benefit driven content peices that pop up at the speed of the carousel cuts 
+        this div will show on large screens*/}
         <div className="col-start-6 col-end-9">
           <div className="pr-8">
             <BenefitsCarousel />
