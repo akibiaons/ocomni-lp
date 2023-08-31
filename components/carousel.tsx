@@ -5,8 +5,8 @@ import React, { useState, useEffect } from "react";
 export function Carousel() {
   const img = [
     "https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png",
-    "",
-    "",
+    "https://res.cloudinary.com/daf0osydi/image/upload/v1693517363/reshoot-glasses_iueqyp.png",
+    "https://res.cloudinary.com/daf0osydi/image/upload/v1693517355/reshoot-flowers_ieo6zt.png",
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
