@@ -1,5 +1,6 @@
 import React from "react";
-import { Carousel } from "./carousel";
+import { Carousel } from "@/components/carousel";
+import { BenefitsCarousel } from "@/components/benefits-carousel";
 
 export function Body() {
   return (
@@ -16,12 +17,12 @@ export function Body() {
       <div className="pt-20 grid grid-cols-8 pl-8">
         <div className="col-start-1 col-end-5 border-2 border-blue-600">
           <div>
-            <img src="https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png" />
+            <Carousel />
           </div>
         </div>
         {/* Below will be the benefit driven content peices that pop up at the speed of the carousel cuts */}
-        <div className="col-start-5 col-end-9">
-          <Carousel />
+        <div className="col-start-6 col-end-9">
+          <BenefitsCarousel />
         </div>
       </div>
     </div>

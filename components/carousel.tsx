@@ -3,7 +3,11 @@
 import React, { useState, useEffect } from "react";
 
 export function Carousel() {
-  const img = ["", "", ""];
+  const img = [
+    "https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png",
+    "",
+    "",
+  ];
 
   const [activeSlide, setActiveSlide] = useState(0);
 
