@@ -1,3 +1,5 @@
+import { Header } from "@/components/header";
+
 export default function Home() {
-  return <p>Hello Ocomni LP</p>;
+  return <Header />;
 }
