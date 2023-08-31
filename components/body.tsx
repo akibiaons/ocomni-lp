@@ -12,7 +12,7 @@ export function Body() {
           Powering E-Commerce Growth
         </h1>
         <div>
-          <p className="mt-4 text-xl">
+          <p className="mt-4 text-md font-extralight md:font-normal lg:font-normal">
             Build a simple shop, no coding or design needed, and start growing
             today.
           </p>
