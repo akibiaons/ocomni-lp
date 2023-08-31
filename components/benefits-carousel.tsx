@@ -21,7 +21,7 @@ export function BenefitsCarousel() {
   return (
     <div className="relative flex flex-col items-center pb-4">
       <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4">
-        <p className="text-xl pt-12 font-normal">{quotes[activeQuote]}</p>
+        <p className="text-xl font-normal lg:text-2xl">{quotes[activeQuote]}</p>
       </div>
     </div>
   );

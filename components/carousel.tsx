@@ -25,8 +25,8 @@ export function Carousel() {
   return (
     <>
       <div className="relative flex flex-col items-center pb-4 bg-slate-50 hover:bg-slate-100 hover:cursor-pointer">
-        <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4">
-          <img src={img[activeSlide]} />
+        <div className="container text-left mb-10 mt-8 max-w-xl lg:max-w-2xl mx-auto px-4">
+          <img className="w-full object-cover" src={img[activeSlide]} />
         </div>
         <div className="lg:hidden block">
           <BenefitsCarousel />
