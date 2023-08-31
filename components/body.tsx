@@ -22,7 +22,9 @@ export function Body() {
         </div>
         {/* Below will be the benefit driven content peices that pop up at the speed of the carousel cuts */}
         <div className="col-start-6 col-end-9">
-          <BenefitsCarousel />
+          <div className="pr-8">
+            <BenefitsCarousel />
+          </div>
         </div>
       </div>
     </div>
