@@ -80,3 +80,44 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+/* Below will be the 3D Cube with the CarouselBenefits text in front of it and a scroll animation*/
+
+.cube-container {
+  perspective: 1200px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.face {
+  position: absolute;
+  height: 200px;
+  background: rgba(225, 255, 255, 0.8);
+  border: 1px solid #ccc;
+}
+.face.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.face.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.face.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.face.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.face.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.face.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* End of the styles for the 3D Cube */
