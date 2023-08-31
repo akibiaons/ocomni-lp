@@ -85,6 +85,7 @@ body,
 
 .cube-container {
   perspective: 1200px;
+  perspective-origin: 50% 50%;
 }
 
 .cube {
@@ -93,13 +94,27 @@ body,
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 1s ease;
 }
 
 .face {
   position: absolute;
-  height: 200px;
-  background: rgba(225, 255, 255, 0.8);
-  border: 1px solid #ccc;
+  height: 100%;
+  width: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Semi-transparent white to see the depth effect more clearly */
+  border: 2px solid #fff; /* Gives each face some definition */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Below is the opacity, to hide <p> in other faces not facing the user*/
+  backface-visibility: transparent;
 }
 .face.front {
   transform: rotateY(0deg) translateZ(100px);
