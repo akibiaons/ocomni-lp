@@ -23,7 +23,7 @@ export function Carousel() {
 
   return (
     <>
-      <div className="relative flex flex-col items-center pb-4">
+      <div className="relative flex flex-col items-center pb-4 bg-slate-50 hover:bg-slate-400 hover:cursor-pointer">
         <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4">
           <img src={img[activeSlide]} className="w-full h-full" />
         </div>
