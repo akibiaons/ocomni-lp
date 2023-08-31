@@ -19,10 +19,23 @@ export function BenefitsCarousel() {
   }, [quotes.length]);
 
   return (
-    <div className="relative flex flex-col items-center pb-4">
+    <>
       <div className="container text-left mb-10 mt-8 max-w-lg mx-auto px-4">
-        <p className="text-xl font-normal lg:text-2xl">{quotes[activeQuote]}</p>
+        <p className="text-xl font-normal lg:text-2xl lg:font-medium">
+          {quotes[activeQuote]}
+        </p>
       </div>
-    </div>
+
+      <div className="cube-container hidden lg:block md:block">
+        <div className="cube">
+          <div className="face front">{quotes[activeQuote]}</div>
+          <div className="face back"></div>
+          <div className="face left"></div>
+          <div className="face right"></div>
+          <div className="face top"></div>
+          <div className="face bottom"></div>
+        </div>
+      </div>
+    </>
   );
 }
