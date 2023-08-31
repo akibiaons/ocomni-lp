@@ -7,10 +7,12 @@ import { BenefitsCarousel } from "@/components/benefits-carousel";
 export function Body() {
   return (
     <div className="pt-8">
-      <div className="container mx-auto">
-        <h1 className="text-2xl font-semibold">Powering E-Commerce</h1>
+      <div className="container mx-auto text-center lg:pt-10 lg:pb-[20rem]">
+        <h1 className="text-2xl lg:text-3xl font-semibold">
+          Powering E-Commerce Growth
+        </h1>
         <div>
-          <p className="mt-4">
+          <p className="mt-4 text-xl">
             Build a simple shop, no coding or design needed, and start growing
             today.
           </p>
