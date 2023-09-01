@@ -39,6 +39,8 @@ export function Body() {
           </div>
         </div>
       </div>
+      {/* Below is the benefits driven cards (template products ONLY, thankyou) */}
+      <div></div>
     </>
   );
 }
