@@ -101,3 +101,5 @@ body,
   width: 95%; /* or any desired value */
   height: auto; /* maintain the aspect ratio */
 }
+/* Wonder if the globalcss is messin with the npm run dev command, cause starting a project
+leads to a 404 error unless I delete then rewrite one little peice of css and click save */
