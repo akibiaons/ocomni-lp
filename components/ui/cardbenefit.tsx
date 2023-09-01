@@ -1,9 +1,6 @@
 import React from "react";
 import { TbWorldWww } from "react-icons/tb";
 import { AiOutlineUnlock } from "react-icons/ai";
-import { BiSupport } from "react-icons/bi";
-import { GrLineChart } from "react-icons/gr";
-import { MdPhonelink } from "react-icons/md";
 import { CiMoneyBill } from "react-icons/ci";
 
 import {
@@ -18,7 +15,7 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-52 pb-20 bg-gradient-to-b from-white to-slate-300">
+      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-52 pb-20 ">
         <div className="col-start-2 col-end-4">
           <Card>
             <CardHeader>
