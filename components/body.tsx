@@ -18,7 +18,22 @@ export function Body() {
           </div>
         </div>
         <div className="col-start-5 col-end-8">
-          <img src="" />
+          <div className="img-container">
+            <div className="img-behind-wrapper">
+              <img
+                className="img-behind"
+                src="https://res.cloudinary.com/daf0osydi/image/upload/v1693517355/reshoot-flowers_ieo6zt.png"
+                alt="ocomni project storefront"
+              />
+            </div>
+            <div className="img-front-wrapper">
+              <img
+                className="img-front"
+                src="https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png"
+                alt="ocomni dashboard for ecommerce clients"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

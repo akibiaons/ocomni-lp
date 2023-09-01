@@ -80,3 +80,33 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+.img-container {
+  position: absolute;
+}
+
+.img-behind-wrapper,
+.img-front-wrapper {
+  position: relative;
+}
+
+.img-behind-wrapper {
+  padding-top: -1rem; /* Push the image down */
+  padding-left: 2rem; /* Push the image right */
+}
+
+.img-behind {
+  opacity: 0.6;
+  filter: brightness(0.7);
+}
+
+.img-front-wrapper {
+  margin-top: -20rem; /* Pull the image up */
+  z-index: 2;
+}
+
+.img-behind,
+.img-front {
+  width: 95%; /* or any desired value */
+  height: 25rem; /* maintain the aspect ratio */
+}
