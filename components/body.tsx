@@ -1,9 +1,11 @@
 "use client";
 
+import { CardB } from "@/components/ui/cardbenefit";
+
 export function Body() {
   return (
     <>
-      <div className="grid grid-cols-8">
+      <div className="grid grid-cols-8 hero-section">
         <div className="col-start-2 col-end-5 pt-20 pr-2">
           <h1 className="text-lg lg:text-5xl font-semibold pb-8 text-wrap">
             Powering E-Commerce with
@@ -22,25 +24,22 @@ export function Body() {
         </div>
         <div className="col-start-5 col-end-8 pt-8">
           <div className="img-container">
-            <div className="img-behind-wrapper">
-              <img
-                className="img-behind"
-                src="https://res.cloudinary.com/daf0osydi/image/upload/v1693517355/reshoot-flowers_ieo6zt.png"
-                alt="ocomni project storefront"
-              />
-            </div>
-            <div className="img-front-wrapper">
-              <img
-                className="img-front"
-                src="https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png"
-                alt="ocomni dashboard for ecommerce clients"
-              />
-            </div>
+            <img
+              className="img-behind"
+              src="https://res.cloudinary.com/daf0osydi/image/upload/v1693517355/reshoot-flowers_ieo6zt.png"
+              alt="ocomni project storefront"
+            />
+            <img
+              className="img-front"
+              src="https://res.cloudinary.com/daf0osydi/image/upload/v1693514835/ocomni-lp-img_vcs14g.png"
+              alt="ocomni dashboard for ecommerce clients"
+            />
           </div>
         </div>
       </div>
-      {/* Below is the benefits driven cards (template products ONLY, thankyou) */}
-      <div></div>
+      <div className="mt-20">
+        <CardB></CardB>
+      </div>
     </>
   );
 }
