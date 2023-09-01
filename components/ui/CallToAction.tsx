@@ -13,6 +13,23 @@ export function CallToAction() {
             <span className="text-[#5B45BB]"> Ocomni</span>
           </h2>
         </div>
+        <div className="image-container">
+          <img
+            className="portfolio-one"
+            src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610586/reshoot-glasses_mhtbxx.png"
+            alt=""
+          />
+          <img
+            className="portfolio-two"
+            src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
+            alt=""
+          />
+          <img
+            className="portfolio-three"
+            src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
+            alt=""
+          />
+        </div>
       </div>
     </>
   );
