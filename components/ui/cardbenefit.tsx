@@ -18,7 +18,7 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="grid max-w-[95%] grid-cols-8 gap-4">
+      <div className="grid max-w-[95%] grid-cols-8 gap-4 pt-52 pb-20">
         <div className="col-start-2 col-end-4">
           <Card>
             <CardHeader>
@@ -42,10 +42,9 @@ export function CardB() {
             </CardHeader>
             <CardContent>
               <CardDescription>
-                Our easy to use templates come with a frontend interface that is
-                simple and intuitive for your customers. Get a custom, site once
-                you are comftorable setting up your products and are getting
-                interest with your marketing efforts.
+                Our store templates come with a order management system, payment
+                system, and store front. The ultimate all in one package for
+                begineers.
               </CardDescription>
             </CardContent>
           </Card>
@@ -57,7 +56,10 @@ export function CardB() {
               <CardTitle>Code free, no tech needed</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>Some text here</CardDescription>
+              <CardDescription>
+                Ocomni, templates are great for low cost and ease of access. No
+                coding, or design knowledge is required, setup all in one day!
+              </CardDescription>
             </CardContent>
           </Card>
         </div>
