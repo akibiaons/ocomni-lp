@@ -9,8 +9,8 @@ export function Header() {
             <span className="cursor-pointer">Ocomni</span>
           </p>
         </div>
-        <div className="border p-2 text-sm rounded-md bg-slate-100 hover:bg-slate-300 hover:cursor-pointer">
-          <p className="">
+        <div className="border p-2 text-sm rounded-md hover:cursor-pointer hover:bg-slate-300 bg-[#5B45BB] text-white">
+          <p>
             <span>Get Custom Sites Built Here 👋 </span>
           </p>
         </div>

@@ -18,11 +18,11 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="grid max-w-[95%] grid-cols-8 gap-4 pt-52 pb-20">
+      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-52 pb-20 bg-gradient-to-b from-white to-slate-300">
         <div className="col-start-2 col-end-4">
           <Card>
             <CardHeader>
-              <CiMoneyBill className="text-3xl mr-3" />
+              <CiMoneyBill className="text-2xl mr-3" />
               <CardTitle>Reduced Startup Costs</CardTitle>
             </CardHeader>
             <CardContent>
