@@ -24,13 +24,6 @@ export function Body() {
             <Carousel />
           </div>
         </div>
-        {/* Below will be the benefit driven content peices that pop up at the speed of the carousel cuts 
-        this div will show on large screens*/}
-        <div className="col-start-6 col-end-8 hidden lg:block md:block">
-          <div className="pr-8">
-            <BenefitsCarousel />
-          </div>
-        </div>
       </div>
     </div>
   );

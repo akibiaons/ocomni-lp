@@ -51,8 +51,8 @@ export function BenefitsCarousel() {
           <div className="face back">{quotes[1]}</div>
           <div className="face left">{quotes[2]}</div>
           <div className="face right">{quotes[3]}</div>
-          <div className="face top">Something</div>
-          <div className="face bottom">Something</div>
+          <div className="face top"></div>
+          <div className="face bottom"></div>
         </div>
       </div>
     </>

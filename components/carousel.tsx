@@ -28,7 +28,7 @@ export function Carousel() {
         <div className="container text-left mb-10 mt-8 max-w-xl lg:max-w-2xl mx-auto px-4">
           <img className="w-full object-cover" src={img[activeSlide]} />
         </div>
-        <div className="lg:hidden block">
+        <div>
           <BenefitsCarousel />
         </div>
       </div>
