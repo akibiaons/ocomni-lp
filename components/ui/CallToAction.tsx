@@ -34,10 +34,21 @@ export function CallToAction() {
                 alt="computer"
               />
               <img
-                className="relative top-[-50%] left-[55%] w-[20%]"
+                className="relative top-[-50%] left-[60%] w-[20%]"
                 src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/mobilephone_hvb50n.png"
                 alt="phone"
               />
+            </div>
+            <div className="col-start-4 justify-center items-center mt-40 mr-30">
+              <p className="pb-8 text-xl font-normal">
+                Easy to deploy, and starting as low as $5.00 a month
+              </p>
+              <p className="pb-8 text-xl font-normal">
+                No coding required, and free comprehensive guides given
+              </p>
+              <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-200 hover:text-black text-white">
+                Select Store Template
+              </button>
             </div>
           </div>
         </div>
