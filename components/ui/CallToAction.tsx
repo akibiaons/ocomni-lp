@@ -24,34 +24,53 @@ export function CallToAction() {
             <span className="text-[#5B45BB]"> Ocomni</span>
           </h2>
         </div>
-        {/* Above is the CTA Text and below is the CTA Animation screen */}
-        <div className="flex space x-4">
-          <div className="laptop">
+        {/* Below is new CTA Portfolio Animation w/tailwindcss, I am using grid to stack the elements on top of each other, and z-indexes */}
+        <div className="cta-section pt-20">
+          <div className="grid grid-cols-3 relative">
+            <div className="col-start-1 col-end-3 z-0">
+              <img
+                className="relative top-0 left-0"
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/macbookmockup_hh9dhw.png"
+                alt="computer"
+              />
+              <img
+                className="absolute top-0 left-[30%] w-[20%]"
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/mobilephone_hvb50n.png"
+                alt="phone"
+              />
+            </div>
+          </div>
+        </div>
+        {/*
+         Above is the CTA Text and below is the CTA Animation screen 
+        <div className="container flex space-x-4">
+          <div className="laptop flex-1">
             <img
               src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/macbookmockup_hh9dhw.png"
               alt="Laptop Device"
             />
-            <div className="screen-content">
-              <div
+            <div className="portfolio-img">
+              <img
                 className={`screen-content ${
                   currentPortfolio === 0 ? "fadeIn" : "fadeOut"
                 }`}
-              ></div>
-            </div>
-            <div
-              className={`screen-content ${
-                currentPortfolio === 1 ? "fadeIn" : "fadeOut"
-              }`}
-            >
-              {/* Portfolio 2 content */}
-            </div>
-
-            <div
-              className={`screen-content ${
-                currentPortfolio === 3 ? "fadeIn" : "fadeOut"
-              }`}
-            >
-              {/* Portfolio 3 content */}
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610586/reshoot-glasses_mhtbxx.png"
+                alt="template one example"
+              />
+              <img
+                className={`screen-content ${
+                  currentPortfolio === 1 ? "fadeIn" : "fadeOut"
+                }`}
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
+                alt="template two example"
+              />
+              <img
+                className={`screen-content ${
+                  currentPortfolio === 2 ? "fadeIn" : "fadeOut"
+                }`}
+                alt="template 3 example"
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
+              />
             </div>
           </div>
           <div className="phone">
@@ -60,10 +79,11 @@ export function CallToAction() {
               alt="mobile device"
             />
             <div className="screen-content">
-              {/* Portfolio two items will go here... */}
+              {/* In this div goes the images, just like the computer version
             </div>
           </div>
         </div>
+        */}
       </div>
     </>
   );

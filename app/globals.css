@@ -103,9 +103,10 @@ body,
 }
 /* Wonder if the globalcss is messin with the npm run dev command, cause starting a project
 leads to a 404 error unless I delete then rewrite one little peice of css and click save */
-
+/*================================================================================================================================================*/
 /* Below is the computer and mobile CTA on and off feature controlled with a fade in and fade out */
 
+/*
 @keyframes fadeOut {
   to {
     opacity: 0;
@@ -118,6 +119,18 @@ leads to a 404 error unless I delete then rewrite one little peice of css and cl
   }
 }
 
+/*Below are the laptop and mobile phone portfolio containers sizes
+
+.laptop img {
+  width: 1000px;
+  height: auto;
+}
+
+.phone img {
+  width: 300px;
+  height: auto;
+}
+
 .laptop,
 .phone {
   position: relative;
@@ -125,8 +138,16 @@ leads to a 404 error unless I delete then rewrite one little peice of css and cl
 
 .screen-content {
   position: absolute;
-  top: [appropriate offset];
+  top: [appropriate offset]; /* Adjust based on your laptop image 
   left: [appropriate offset];
   width: [appropriate width];
   height: [appropriate height];
+  overflow: hidden; /* Ensures images don't spill outside the bounds 
 }
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the entire screen-content area
+}
+*/
