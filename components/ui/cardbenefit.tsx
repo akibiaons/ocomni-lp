@@ -15,7 +15,7 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-52 pb-20 ">
+      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-40 pb-20 ">
         <div className="col-start-2 col-end-4">
           <Card>
             <CardHeader>

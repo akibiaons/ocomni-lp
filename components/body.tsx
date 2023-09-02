@@ -38,7 +38,7 @@ export function Body() {
           </div>
         </div>
       </div>
-      <div className="pt-20 bg-gradient-to-b from-white to-slate-300">
+      <div className="bg-gradient-to-b from-white to-slate-300">
         <CardB></CardB>
       </div>
       <div className="bg-gradient-to-b from-slate-300 to-slate-200">

@@ -16,7 +16,7 @@ export function CallToAction() {
 
   return (
     <>
-      <div className="text-center container mx-auto">
+      <div className="text-center container mx-auto pt-40">
         <div className="flex flex-col">
           <h2 className="text-4xl font-bold text-background text-black leading-[150%]">
             We created an economical way to test, and deploy e-commerce sites.
@@ -25,7 +25,7 @@ export function CallToAction() {
           </h2>
         </div>
         {/* Below is new CTA Portfolio Animation w/tailwindcss, I am using grid to stack the elements on top of each other, and z-indexes */}
-        <div className="cta-section pt-20">
+        <div className="cta-section pt-40">
           <div className="grid grid-cols-3 relative">
             <div className="col-start-1 col-end-4 z-0 justify-center items-center">
               <img
