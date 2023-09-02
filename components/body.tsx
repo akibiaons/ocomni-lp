@@ -10,7 +10,7 @@ export function Body() {
         <div className="col-start-1 col-end-5 pl-10 pt-48">
           <h1 className="text-lg lg:text-5xl font-semibold pb-8 text-wrap">
             Powering E-Commerce with
-            <span className="text-[#5B45BB]">Ocomni</span>
+            <span className="text-[#5B45BB]"> Ocomni</span>
           </h1>
           <p className="text-md lg:text-2xl pb-8 pt-10">
             Streamlined, affordable, easy to use sites for ecommerce purposes
