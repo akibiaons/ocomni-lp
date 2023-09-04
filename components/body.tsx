@@ -2,6 +2,7 @@
 
 import { CardB } from "@/components/ui/cardbenefit";
 import { CallToAction } from "@/components/ui/CallToAction";
+import Footer from "@/components/ui/footer";
 
 export function Body() {
   return (
@@ -43,6 +44,9 @@ export function Body() {
       </div>
       <div className="bg-gradient-to-b from-slate-300 to-slate-200">
         <CallToAction></CallToAction>
+      </div>
+      <div className="">
+        <Footer></Footer>
       </div>
     </>
   );
