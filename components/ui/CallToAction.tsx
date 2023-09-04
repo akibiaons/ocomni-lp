@@ -30,28 +30,28 @@ export function CallToAction() {
 
   return (
     <>
-      <div className="text-center container mx-auto pt-40">
-        <div className="flex flex-col">
-          <h2 className="text-4xl font-bold text-background text-black leading-[150%]">
+      <div className="lg:text-center lg:container lg:mx-auto lg:pt-40   text-center">
+        <div className="lg:flex lg:flex-col">
+          <h2 className="lg:text-4xl lg:font-bold lg:text-background lg:text-black lg:leading-[150%] font-bold text-xl pt-12 pb-12">
             We created an economical way to test, and deploy e-commerce sites.
             No more time and money wasted on site builders, sell securly with
             <span className="text-[#5B45BB]"> Ocomni</span>
           </h2>
         </div>
         {/* Below is new CTA Portfolio Animation w/tailwindcss, I am using grid to stack the elements on top of each other, and z-indexes */}
-        <div className="cta-section pt-40">
-          <div className="grid grid-cols-3 relative">
-            <div className="col-start-1 col-end-4 z-0 justify-center items-center">
+        <div className="cta-section lg:pt-40">
+          <div className="lg:grid lg:grid-cols-3 lg:relative ">
+            <div className="lg:col-start-1 lg:col-end-4 lg:z-0 lg:justify-center lg:items-center">
               <img src={animation[currentPortfolio]} />
             </div>
-            <div className="col-start-4 justify-center items-center mt-40 mr-30">
-              <p className="pb-8 text-xl font-normal">
+            <div className="lg:col-start-4 lg:justify-center lg:items-center lg:mt-40 lg:mr-30 ">
+              <p className="lg:pb-8 lg:text-xl lg:font-normal pb-4">
                 Easy to deploy, and starting as low as $5.00 a month,
               </p>
-              <p className="pb-8 text-xl font-normal">
+              <p className="lg:pb-8 lg:text-xl lg:font-normal pb-12">
                 No coding required, and free comprehensive guides given
               </p>
-              <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white">
+              <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white mb-12">
                 Select Store Template
               </button>
             </div>
