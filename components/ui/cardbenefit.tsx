@@ -15,15 +15,15 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="grid max-w-[100%] grid-cols-8 gap-20 pt-40 pb-20 ">
-        <div className="col-start-2 col-end-4">
+      <div className="lg:grid lg:max-w-[100%] lg:grid-cols-8 lg:gap-20 lg:pt-40 lg:pb-20 md:p-8 pt-10">
+        <div className="lg:col-start-2 lg:col-end-4 md:pb-10 md:text-left text-left">
           <Card>
             <CardHeader>
-              <CiMoneyBill className="text-2xl mr-3" />
+              <CiMoneyBill className="lg:text-2xl lg:mr-3" />
               <CardTitle>Reduced Startup Costs</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
+              <CardDescription className="md:text-xl">
                 Get your products to market quicker, and spend more time
                 focusing on product research, selection, and marketing.
               </CardDescription>
@@ -31,14 +31,14 @@ export function CardB() {
           </Card>
         </div>
         {/*Cards section*/}
-        <div className="col-start-4 col-end-6">
+        <div className="lg:col-start-4 lg:col-end-6 md:pb-10 lg:pt-0 pt-8">
           <Card>
             <CardHeader>
-              <AiOutlineUnlock className="text-3xl mr-3" />
+              <AiOutlineUnlock className="lg:text-3xl lg:mr-3" />
               <CardTitle>All in one package</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
+              <CardDescription className="md:text-xl">
                 Our store templates come with a order management system, payment
                 system, and store front. The ultimate all in one package for
                 begineers.
@@ -46,14 +46,14 @@ export function CardB() {
             </CardContent>
           </Card>
         </div>
-        <div className="col-start-6 col-end-8">
+        <div className="lg:col-start-6 lg:col-end-8 md:pb-10 lg:pt-0 pt-8">
           <Card>
             <CardHeader>
-              <TbWorldWww className="text-3xl mr-3" />
+              <TbWorldWww className="lg:text-3xl lg:mr-3" />
               <CardTitle>Code free, no tech needed</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
+              <CardDescription className="md:text-xl">
                 Ocomni, templates are great for low cost and ease of access. No
                 coding, or design knowledge is required, setup all in one day!
               </CardDescription>
