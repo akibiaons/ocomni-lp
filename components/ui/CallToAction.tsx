@@ -51,7 +51,7 @@ export function CallToAction() {
               <p className="pb-8 text-xl font-normal">
                 No coding required, and free comprehensive guides given
               </p>
-              <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-200 hover:text-black text-white">
+              <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white">
                 Select Store Template
               </button>
             </div>
