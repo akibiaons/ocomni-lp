@@ -48,7 +48,7 @@ export function CallToAction() {
               <p className="lg:pb-8 lg:text-xl lg:font-normal pb-4">
                 Easy to deploy, and starting as low as $5.00 a month,
               </p>
-              <p className="lg:pb-8 lg:text-xl lg:font-normal pb-12">
+              <p className="lg:text-xl lg:font-normal pb-12">
                 No coding required, and free comprehensive guides given
               </p>
               <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white mb-12">
