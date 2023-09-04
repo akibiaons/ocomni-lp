@@ -4,15 +4,29 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 export function CallToAction() {
+  const animation = [
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851038/5_evcque.svg",
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851035/6_xrpcua.svg",
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851037/3_ob6pgw.svg",
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851034/4_tdzirp.svg",
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851034/1_dnm1bk.svg",
+    "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851027/2_naqtte.svg",
+  ];
+
   const [currentPortfolio, setCurrentPortfolio] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPortfolio((prev) => (prev + 1) % 3); // cycle between 0, 1, 2
-    }, 3000); // change every 3 seconds, adjust as needed
+    const updatePortfolio = () => {
+      setCurrentPortfolio((prev) => (prev + 1) % animation.length);
+    };
+
+    const isLongDurationSlide = [0, 2, 4].includes(currentPortfolio);
+    const intervalDuration = isLongDurationSlide ? 3000 : 500;
+
+    const interval = setInterval(updatePortfolio, intervalDuration);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentPortfolio, animation.length]);
 
   return (
     <>
@@ -28,38 +42,7 @@ export function CallToAction() {
         <div className="cta-section pt-40">
           <div className="grid grid-cols-3 relative">
             <div className="col-start-1 col-end-4 z-0 justify-center items-center">
-              <img
-                className="relative "
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/macbookmockup_hh9dhw.png"
-                alt="computer"
-              />
-              <img
-                className={`top-[20%] left-[10%] ${
-                  currentPortfolio === 0 ? "block" : "hidden"
-                }`}
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
-                alt="template site 1"
-              />
-              <img
-                className={`top-[20%] left-[10%] ${
-                  currentPortfolio === 1 ? "block" : "hidden"
-                }`}
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
-                alt="template site 2"
-              />
-              <img
-                className={`top-[20%] left-[10%] ${
-                  currentPortfolio === 2 ? "block" : "hidden"
-                }`}
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
-                alt="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
-              />
-
-              <img
-                className="relative top-[-50%] left-[60%] w-[20%]"
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/mobilephone_hvb50n.png"
-                alt="phone"
-              />
+              <img src={animation[currentPortfolio]} />
             </div>
             <div className="col-start-4 justify-center items-center mt-40 mr-30">
               <p className="pb-8 text-xl font-normal">
