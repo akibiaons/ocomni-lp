@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <div className=" ">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-[20rem]">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
             href="https://ocomni.com/"
@@ -34,7 +34,7 @@ export default function Footer() {
         <hr className="my-6 border-[gray] sm:mx-auto lg:my-8" />
         <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2023
-          <a href="https://ocomni.com/" className="hover:underline">
+          <a href="https://ocomni.com/" className="hover:underline pl-1">
             Ocomni™
           </a>
           . All Rights Reserved.
