@@ -9,7 +9,7 @@ export function CallToAction() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPortfolio((prev) => (prev + 1) % 3); // cycle between 0, 1, 2
-    }, 5000); // change every 5 seconds, adjust as needed
+    }, 3000); // change every 3 seconds, adjust as needed
 
     return () => clearInterval(interval);
   }, []);
@@ -34,6 +34,28 @@ export function CallToAction() {
                 alt="computer"
               />
               <img
+                className={`top-[20%] left-[10%] ${
+                  currentPortfolio === 0 ? "block" : "hidden"
+                }`}
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
+                alt="template site 1"
+              />
+              <img
+                className={`top-[20%] left-[10%] ${
+                  currentPortfolio === 1 ? "block" : "hidden"
+                }`}
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
+                alt="template site 2"
+              />
+              <img
+                className={`top-[20%] left-[10%] ${
+                  currentPortfolio === 2 ? "block" : "hidden"
+                }`}
+                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
+                alt="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
+              />
+
+              <img
                 className="relative top-[-50%] left-[60%] w-[20%]"
                 src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/mobilephone_hvb50n.png"
                 alt="phone"
@@ -41,7 +63,7 @@ export function CallToAction() {
             </div>
             <div className="col-start-4 justify-center items-center mt-40 mr-30">
               <p className="pb-8 text-xl font-normal">
-                Easy to deploy, and starting as low as $5.00 a month
+                Easy to deploy, and starting as low as $5.00 a month,
               </p>
               <p className="pb-8 text-xl font-normal">
                 No coding required, and free comprehensive guides given
@@ -52,49 +74,6 @@ export function CallToAction() {
             </div>
           </div>
         </div>
-        {/*
-         Above is the CTA Text and below is the CTA Animation screen 
-        <div className="container flex space-x-4">
-          <div className="laptop flex-1">
-            <img
-              src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/macbookmockup_hh9dhw.png"
-              alt="Laptop Device"
-            />
-            <div className="portfolio-img">
-              <img
-                className={`screen-content ${
-                  currentPortfolio === 0 ? "fadeIn" : "fadeOut"
-                }`}
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610586/reshoot-glasses_mhtbxx.png"
-                alt="template one example"
-              />
-              <img
-                className={`screen-content ${
-                  currentPortfolio === 1 ? "fadeIn" : "fadeOut"
-                }`}
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/cowboy-2-template_d6b0zj.png"
-                alt="template two example"
-              />
-              <img
-                className={`screen-content ${
-                  currentPortfolio === 2 ? "fadeIn" : "fadeOut"
-                }`}
-                alt="template 3 example"
-                src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693610585/reshoot-flowers_yk3tb1.png"
-              />
-            </div>
-          </div>
-          <div className="phone">
-            <img
-              src="https://res.cloudinary.com/dv5fxnfot/image/upload/v1693613251/mobilephone_hvb50n.png"
-              alt="mobile device"
-            />
-            <div className="screen-content">
-              {/* In this div goes the images, just like the computer version
-            </div>
-          </div>
-        </div>
-        */}
       </div>
     </>
   );
