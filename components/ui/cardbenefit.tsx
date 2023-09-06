@@ -15,8 +15,8 @@ import {
 export function CardB() {
   return (
     <>
-      <div className="lg:grid lg:max-w-[100%] lg:grid-cols-8 lg:gap-20 lg:pt-40 lg:pb-20 md:p-8 pt-10">
-        <div className="lg:col-start-2 lg:col-end-4 md:pb-10 md:text-left text-left">
+      <div className="lg:grid lg:max-w-[100%] lg:grid-cols-9 lg:gap-20 lg:pt-40 lg:pb-20 md:p-8 pt-10">
+        <div className="lg:col-start-1 lg:col-end-4 md:pb-10 md:text-left text-left">
           <Card>
             <CardHeader>
               <CiMoneyBill className="lg:text-2xl lg:mr-3" />
@@ -31,7 +31,7 @@ export function CardB() {
           </Card>
         </div>
         {/*Cards section*/}
-        <div className="lg:col-start-4 lg:col-end-6 md:pb-10 lg:pt-0 pt-8">
+        <div className="lg:col-start-4 lg:col-end-7 md:pb-10 lg:pt-0 pt-8">
           <Card>
             <CardHeader>
               <AiOutlineUnlock className="lg:text-3xl lg:mr-3" />
@@ -46,7 +46,7 @@ export function CardB() {
             </CardContent>
           </Card>
         </div>
-        <div className="lg:col-start-6 lg:col-end-8 md:pb-10 lg:pt-0 pt-8">
+        <div className="lg:col-start-7 lg:col-end-10 md:pb-10 lg:pt-0 pt-8">
           <Card>
             <CardHeader>
               <TbWorldWww className="lg:text-3xl lg:mr-3" />
