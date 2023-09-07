@@ -3,6 +3,7 @@
 import { CardB } from "@/components/ui/cardbenefit";
 import { CallToAction } from "@/components/ui/CallToAction";
 import Footer from "@/components/ui/footer";
+import Link from "next/link";
 
 export function Body() {
   return (
@@ -19,7 +20,7 @@ export function Body() {
           <div className="pt-10 lg:pt-0 md:pt-8">
             <p className="lg:mt-8">
               <span className="border-2 rounded-lg p-2 lg:p-4 md:p-4 hover:cursor-pointer hover:bg-slate-300 bg-[#5B45BB] text-white">
-                Learn More
+                <Link href="/signup">Learn More</Link>
               </span>
             </p>
           </div>
