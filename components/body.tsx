@@ -16,7 +16,7 @@ export function Body() {
           <p className="lg:text-md lg:text-2xl lg:pb-8 lg:pt-2 md:text-md md:text-lg md:pb-2 md:pt-10 row-start-4 row-end-4 text-md pt-8">
             Streamlined, affordable, easy to use sites for ecommerce purposes
           </p>
-          <div className="pt-16 lg:pt-0 md:pt-8">
+          <div className="pt-10 lg:pt-0 md:pt-8">
             <p className="lg:mt-8">
               <span className="border-2 rounded-lg p-2 lg:p-4 md:p-4 hover:cursor-pointer hover:bg-slate-300 bg-[#5B45BB] text-white">
                 Learn More
