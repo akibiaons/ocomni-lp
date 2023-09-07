@@ -58,6 +58,7 @@ export function CardB() {
                 coding, or design knowledge is required, setup all in one day!
               </CardDescription>
             </CardContent>
+            {/*@elijah @ben THIS NEEDS FIXING UP @BEN PLS PLS FIX MOTHERFUCKER <LOVE YOU :))> @ELIJAH :3 */}
           </Card>
         </div>
       </div>
