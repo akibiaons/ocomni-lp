@@ -8,12 +8,12 @@ export function Body() {
   return (
     <>
       <div className="lg:grid lg:grid-cols-8 hero-section  md:grid md:grid-cols-8 md:grid-rows-1 md:pb-20  grid grid-rows-2">
-        <div className="lg:col-start-1 lg:col-end-5 lg:pl-10 lg:pt-48   md:col-start-1 md:col-end-5 md:pl-10 md:pt-48 p-10">
-          <h1 className="lg:text-5xl lg:font-semibold lg:pb-8 lg:text-wrap md:text-5xl md:font-semibold md:pb-8 md:text-wrap row-start-1 row-end-3 font-bold text-4xl">
+        <div className="lg:col-start-1 lg:col-end-5 lg:pl-10 lg:pt-48   md:col-start-1 md:col-end-5 md:pl-10 md:pt-40 p-10 pt-20">
+          <h1 className="lg:text-5xl lg:font-semibold lg:pb-8 lg:text-wrap md:text-5xl md:font-semibold md:pb-1 md:text-wrap row-start-1 row-end-3 font-bold text-4xl">
             Powering E-Commerce with
             <span className="text-[#5B45BB]"> Ocomni</span>
           </h1>
-          <p className="lg:text-md lg:text-2xl lg:pb-8 lg:pt-2 md:text-md md:text-2xl md:pb-2 md:pt-10 row-start-4 row-end-4 text-md pt-8">
+          <p className="lg:text-md lg:text-2xl lg:pb-8 lg:pt-2 md:text-md md:text-lg md:pb-2 md:pt-10 row-start-4 row-end-4 text-md pt-8">
             Streamlined, affordable, easy to use sites for ecommerce purposes
           </p>
           <div className="pt-16 lg:pt-0 md:pt-8">
