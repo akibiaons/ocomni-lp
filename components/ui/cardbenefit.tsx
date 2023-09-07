@@ -16,7 +16,7 @@ export function CardB() {
   return (
     <>
       <div className="lg:grid lg:max-w-[100%] lg:grid-cols-9 lg:gap-20 lg:pt-40 lg:pb-20 md:p-8 pt-10">
-        <div className="lg:col-start-1 lg:col-end-4 md:pb-10 md:text-left text-left">
+        <div className="lg:col-start-1 lg:col-end-4 md:pb-10 md:text-left text-left shadow-xl">
           <Card>
             <CardHeader>
               <CiMoneyBill className="lg:text-2xl lg:mr-3" />
@@ -31,7 +31,7 @@ export function CardB() {
           </Card>
         </div>
         {/*Cards section*/}
-        <div className="lg:col-start-4 lg:col-end-7 md:pb-10 lg:pt-0 pt-8">
+        <div className="lg:col-start-4 lg:col-end-7 md:pb-10 lg:pt-0 pt-20 shadow-xl">
           <Card>
             <CardHeader>
               <AiOutlineUnlock className="lg:text-3xl lg:mr-3" />
@@ -46,14 +46,14 @@ export function CardB() {
             </CardContent>
           </Card>
         </div>
-        <div className="lg:col-start-7 lg:col-end-10 md:pb-10 lg:pt-0 pt-8">
+        <div className="lg:col-start-7 lg:col-end-10 md:pb-10 lg:pt-0 pt-20 shadow-xl">
           <Card>
             <CardHeader>
               <TbWorldWww className="lg:text-3xl lg:mr-3" />
               <CardTitle>Code free, no tech needed</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="md:text-xl">
+              <CardDescription className="md:text-xl pb-12">
                 Ocomni, templates are great for low cost and ease of access. No
                 coding, or design knowledge is required, setup all in one day!
               </CardDescription>
