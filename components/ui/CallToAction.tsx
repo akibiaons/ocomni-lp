@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export function CallToAction() {
   const animation = [
@@ -44,15 +45,12 @@ export function CallToAction() {
             <div className="lg:col-start-1 lg:col-end-4 lg:z-0 lg:justify-center lg:items-center">
               <img src={animation[currentPortfolio]} />
             </div>
-            <div className="lg:col-start-4 lg:justify-center lg:items-center lg:mt-40 lg:mr-30 pl-4">
-              <p className="lg:pb-8 lg:text-xl lg:font-normal pb-4 font-light text-left">
-                - Easy to deploy, and starting as low as $5.00 a month,
-              </p>
-              <p className="lg:text-xl lg:font-normal pb-12 font-light text-left">
-                - No coding required, and free comprehensive guides given
+            <div className="lg:col-start-4 lg:justify-center lg:items-center lg:mt-40 lg:mr-30 pl-4 text-center">
+              <p className="lg:pb-8 lg:text-xl lg:font-normal pb-4 font-light text-center">
+                Easy to deploy, and starting as low as $5.00 a month.
               </p>
               <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white mb-12">
-                Select Store Template
+                <Link href="/signup">Select Store Template</Link>
               </button>
             </div>
           </div>

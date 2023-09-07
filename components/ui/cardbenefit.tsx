@@ -19,7 +19,7 @@ export function CardB() {
         <div className="lg:col-start-1 lg:col-end-4 md:pb-10 md:text-left text-left shadow-xl">
           <Card>
             <CardHeader>
-              <CiMoneyBill className="lg:text-2xl lg:mr-3" />
+              <CiMoneyBill className="lg:text-2xl lg:mr-3 text-4xl" />
               <CardTitle>Reduced Startup Costs</CardTitle>
             </CardHeader>
             <CardContent>
@@ -34,7 +34,7 @@ export function CardB() {
         <div className="lg:col-start-4 lg:col-end-7 md:pb-10 lg:pt-0 pt-20 shadow-xl">
           <Card>
             <CardHeader>
-              <AiOutlineUnlock className="lg:text-3xl lg:mr-3" />
+              <AiOutlineUnlock className="lg:text-3xl lg:mr-3 text-4xl" />
               <CardTitle>All in one package</CardTitle>
             </CardHeader>
             <CardContent>
@@ -49,7 +49,7 @@ export function CardB() {
         <div className="lg:col-start-7 lg:col-end-10 md:pb-10 lg:pt-0 pt-20 shadow-xl">
           <Card>
             <CardHeader>
-              <TbWorldWww className="lg:text-3xl lg:mr-3" />
+              <TbWorldWww className="lg:text-3xl lg:mr-3 text-4xl" />
               <CardTitle>Code free, no tech needed</CardTitle>
             </CardHeader>
             <CardContent>
