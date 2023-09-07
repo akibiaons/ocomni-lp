@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 const SignUpPage = () => {
   const images = [
@@ -9,39 +10,81 @@ const SignUpPage = () => {
     "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851034/1_dnm1bk.svg",
   ];
 
+  const titles = ["Western Template", "New York", "Efficiency"];
+
   const [currentImage, setCurrentImage] = useState(0);
+  const [currentTitle, setCurrentTitle] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImage(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const nextTitle = () => {
+    setCurrentTitle((prevIndex) => (prevIndex + 1) % titles.length);
+  };
+
+  const previousTitle = () => {
+    setCurrentTitle(
+      (prevIndex) => (prevIndex - 1 + titles.length) % titles.length
+    );
+  };
 
   return (
     <>
-      <div className="title-container">
+      {/* Main Heading */}
+      <div>
         <h1 className="text-center font-bold text-4xl pt-10">
+          {/* Styling for the text gradient effect */}
           <span className="bg-gradient-to-r to-black via-[#5B45BB] from-[#5B45BB] text-transparent bg-clip-text">
             Templates
           </span>
         </h1>
       </div>
-      <div className="grid grid-rows-2 border-2 border-red-500 mt-10 lg:grid lg:grid-cols-12 lg-grid-rows-1 lg:border-2 lg:border-blue-500">
-        <div className="text-center sign-up-form row-start-2 lg:row-start-1 lg:col-start-3 lg:col-end-6">
-          <p>Sign Up</p>
-        </div>
+
+      {/* Main Grid Container */}
+      <div className="mx-auto grid grid-rows-1 mt-10 lg:grid lg:grid-cols-12 lg-grid-rows-2 ">
+        {/* Grid cell for Image & Title. Starts at 7th column and ends at 12th on large screens. */}
         <div
-          className="carousel-signup bg-cover bg-center h-96 lg:col-start-7 lg:col-end-12 lg:border-2 lg:border-green-500 lg:h-[40rem] lg:w-full"
+          className="text-center bg-contain bg-center h-96 lg:col-start-7 lg:col-end-12 lg:row-start-1 lg:h-[40rem] lg:w-full flex flex-col "
           style={{
-            backgroundImage: `url(${images[currentImage]})`,
+            backgroundImage: `url(${images[currentImage]})`, // Set the current image as a background
           }}
         >
-          <div className="flex">
-            <div
-              className="selector-1 h-0 w-0 border-x-8 border-x-transparent border-b-[16px] border-b-black mr-8 hover:cursor-pointer hover:border-b-slate-500"
-              style={{ transform: "rotate(-90deg)" }}
-            />
-            <div
-              className="selector-2 h-0 w-0 border-x-8 border-x-transparent border-b-[16px] border-black hover:cursor-pointer hover:border-b-slate-500"
-              style={{ transform: "rotate(90deg)" }}
-            />
+          {/* Title for the image. It's centered vertically and horizontally. */}
+          <div className="text-center font-semibold text-2xl my-4 pt-[20rem] lg:pt-[34rem] p-5">
+            {titles[currentTitle]}
+          </div>
+          <div className="flex justify-center">
+            <div className="mr-4">
+              <BsFillArrowLeftSquareFill
+                size="2rem"
+                onClick={() => {
+                  previousImage();
+                  previousTitle();
+                }}
+              />
+            </div>
+            <div className="ml-40 lg:ml-80">
+              <BsFillArrowLeftSquareFill
+                onClick={() => {
+                  nextImage();
+                  nextTitle();
+                }}
+                size="2rem"
+                style={{ transform: "rotate(180deg)" }}
+              />
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Arrow icons container */}
     </>
   );
 };
