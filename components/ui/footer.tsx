@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <div className=" ">
+    <div className="pt-8">
       <div className="py-1 p-8 lg:py-[2rem] md:py-[15rem]">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a
