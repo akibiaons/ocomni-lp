@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { SignUp } from "@/components/ui/sign-up";
 
