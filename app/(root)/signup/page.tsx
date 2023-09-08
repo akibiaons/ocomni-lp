@@ -63,6 +63,7 @@ const SignUpPage = () => {
           <div className="flex justify-center">
             <div className="mr-4">
               <BsFillArrowLeftSquareFill
+                className="hover:cursor-pointer hover:bg-slate-400"
                 size="2rem"
                 onClick={() => {
                   previousImage();
@@ -70,8 +71,12 @@ const SignUpPage = () => {
                 }}
               />
             </div>
+            <div className="font-extralight text-sm text-clip">
+              <p>Click arrows until you reach desired template</p>
+            </div>
             <div className="ml-40 lg:ml-80">
               <BsFillArrowLeftSquareFill
+                className="hover:cursor-pointer hover:bg-slate-400"
                 onClick={() => {
                   nextImage();
                   nextTitle();
