@@ -54,7 +54,7 @@ const SignUpPage = () => {
         <div className="text-center lg:col-start-1 lg:col-end-5"></div>
         {/* Grid cell for Image & Title. Starts at 7th column and ends at 12th on large screens. */}
         <div
-          className="text-center bg-contain bg-center h-96 lg:col-start-7 lg:col-end-12 lg:row-start-1 lg:h-[40rem] lg:w-full flex flex-col "
+          className="text-center bg-cover lg:bg-contain 2xl:bg-cover bg-center h-96 lg:col-start-7 lg:col-end-12 lg:row-start-1 lg:h-[40rem] lg:w-full flex flex-col "
           style={{
             backgroundImage: `url(${images[currentImage]})`, // Set the current image as a background
           }}
