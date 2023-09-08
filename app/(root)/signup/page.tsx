@@ -71,9 +71,6 @@ const SignUpPage = () => {
                 }}
               />
             </div>
-            <div className="font-extralight text-sm text-clip">
-              <p>Click arrows until you reach desired template</p>
-            </div>
             <div className="ml-40 lg:ml-80">
               <BsFillArrowLeftSquareFill
                 className="hover:cursor-pointer hover:bg-slate-400"
@@ -85,6 +82,9 @@ const SignUpPage = () => {
                 style={{ transform: "rotate(180deg)" }}
               />
             </div>
+          </div>
+          <div className="font-extralight text-sm text-clip pt-4">
+            <p>Click arrows until you reach desired template</p>
           </div>
         </div>
       </div>
