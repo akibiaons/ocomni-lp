@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-import { SignUp } from "@/components/ui/sign-up";
+import { Login } from "@/components/ui/login";
 
 const SignUpPage = () => {
   const images = [
@@ -52,7 +52,7 @@ const SignUpPage = () => {
       <div className="mx-auto grid grid-rows-1 mt-10 lg:grid lg:grid-cols-12 lg-grid-rows-2">
         {/* Grid cell for signup form. Starts at col 1 and ends ar col 5 on large screens, appears underneath on small screens */}
         <div className="text-center lg:col-start-1 lg:col-end-5 ">
-          <SignUp />
+          <Login />
         </div>
         {/* Grid cell for Image & Title. Starts at 7th column and ends at 12th on large screens. */}
         <div
