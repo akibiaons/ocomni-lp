@@ -1,86 +1,92 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 //import OAuth from "../components/OAuth";
-import { useRouter } from "next/router";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { toast, ToastContainer } from "react-toastify";
-import Link from "next/link"; // Import the Link component
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { db } from "../../lib/firebase";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
-export function Login() {
+import { useRouter } from "next/navigation";
+import Link from "next/navigation"; // Import the Link component
+
+export function Register() {
   const [showPassword, setShowPassword] = useState(false);
-  const [pageState, setPageState] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    name: "",
   });
-  const { email, password } = formData;
+  const router = useRouter();
+  const { email, password, name } = formData;
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
   }
-
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     try {
       const auth = getAuth();
-      const userCredentials = await signInWithEmailAndPassword(
+      const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
-      if (userCredentials.user) {
-        <Link href="/account"></Link>;
+
+      if (auth.currentUser) {
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        });
+      } else {
+        console.error("No user found in auth object.");
+        return;
       }
-      toast.success("Sign In Successful.");
+      const user = userCredential.user;
+      const formDataCopy = { ...formData };
+      delete formDataCopy.password;
+      formDataCopy.timestamp = serverTimestamp();
+
+      await setDoc(doc(db, "users", user.uid), formDataCopy);
+      toast.success("Sign up was successful");
+      router.push("/");
     } catch (error) {
-      toast.error("Sign In Credentials Invalid");
+      console.log(error);
     }
   }
 
-  useEffect(() => {
-    document.body.classList.add("page-animation");
-
-    return () => {
-      document.body.classList.remove("page-animation");
-    };
-  }, []);
   return (
     <section className="mx-auto my-14 max-w-6xl px-8 h-vh">
       <div className="my-8 max-w-[300px]  mx-auto">
         <div className="flex flex-row items-center ">
           <div className="cursor-pointer border-b-2 border-purple-600 w-full">
-            <h3 className="uppercase font-bold text-xs text-center mb-3 tracking-wider">
-              <Link href="/account">login</Link>
-            </h3>
-          </div>
-          <div className="cursor-pointer border-b border-gray-400 w-full">
-            <h3 className="uppercase font-medium text-xs text-center mb-3 tracking-wider">
-              <Link href="/register">register</Link>
+            <h3
+              onClick={() => router.push("/register")}
+              className="uppercase font-bold text-xs text-center mb-3 tracking-wider"
+            >
+              register
             </h3>
           </div>
         </div>
         <div>
           <form onSubmit={onSubmit}>
-            <div className="flex flex-col gap-3 py-6">
-              {/* <OAuth /> */}
-              {/* github auth  */}
-              {/* facebook auth */}
-            </div>
-            <div className="flex before:border-t before:flex-1 items-center before:border-gray-400 after:border-t after:flex-1 after:border-gray-400">
-              <p className="text-center text-xs font-medium px-3">OR</p>
-            </div>
+            <div className="flex flex-col gap-3 py-6">{/* <OAuth /> */}</div>
+            <div className="flex before:border-t before:flex-1 items-center after:border-t after:flex-1"></div>
             <div className="flex flex-col gap-3 my-6">
               <input
-                id="email"
                 type="email"
-                value={email}
+                id="email"
                 onChange={onChange}
+                value={email}
                 className="pr-4 pl- py-3 w-full border-slate-400 border-[1px]  transition duration-150 rounded-sm text-sm bg-inherit focus:ring-purple-600 hover:border-purple-600 active:border-purple-900"
-                placeholder="Email"
+                placeholder=" Email"
               />
               <div className="bg-inherit relative">
                 <input
@@ -89,7 +95,7 @@ export function Login() {
                   value={password}
                   onChange={onChange}
                   className="pr-4 pl- py-3 w-full border-slate-400 border-[1px]  transition duration-150 rounded-sm text-sm bg-inherit focus:ring-purple-600 hover:border-purple-600 active:border-purple-900"
-                  placeholder="Your password"
+                  placeholder=" Your password"
                 />
                 {showPassword ? (
                   <AiFillEyeInvisible
@@ -103,20 +109,20 @@ export function Login() {
                   />
                 )}
               </div>
-              <p>
-                <Link
-                  href="/forgot-password"
-                  className="text-sm font-semibold hover:text-purple-600 transition duration-200 ease-in-out "
-                >
-                  Forgot Password?
-                </Link>
-              </p>
+              <input
+                type="text"
+                id="name"
+                onChange={onChange}
+                value={name}
+                className="pr-4 pl- py-3 w-full border-slate-400 border-[1px]  transition duration-150 rounded-sm text-sm bg-inherit focus:ring-purple-600 hover:border-purple-600 active:border-purple-900"
+                placeholder=" Full Name"
+              />
             </div>
             <button
               type="submit"
               className="w-full  text px-7 py-3 font-medium text-sm  rounded-sm   bg-[#6366F1] text-white hover:text-white overflow-hidden transition ease-in-out duration-150  hover:bg-[#5F56D6] active:bg-[#5B45BB] "
             >
-              Continue {" >"}
+              Register {" >"}
             </button>
           </form>
         </div>

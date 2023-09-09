@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-import { Login } from "@/components/ui/login";
+import { Register } from "@/components/ui/register";
 
-const SignUpPage = () => {
+const RegisterPage = () => {
   const images = [
     "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851038/5_evcque.svg",
     "https://res.cloudinary.com/dv5fxnfot/image/upload/v1693851037/3_ob6pgw.svg",
@@ -42,9 +42,7 @@ const SignUpPage = () => {
       <div>
         <h1 className="text-center font-bold text-4xl pt-10">
           {/* Styling for the text gradient effect */}
-          <span className="bg-gradient-to-r to-black via-[#5B45BB] from-[#5B45BB] text-transparent bg-clip-text">
-            Templates
-          </span>
+          <span className="bg-gradient-to-r  text-[#5B45BB]">Templates</span>
         </h1>
       </div>
 
@@ -52,7 +50,7 @@ const SignUpPage = () => {
       <div className="mx-auto grid grid-rows-1 mt-10 lg:grid lg:grid-cols-12 lg-grid-rows-2">
         {/* Grid cell for signup form. Starts at col 1 and ends ar col 5 on large screens, appears underneath on small screens */}
         <div className="text-center lg:col-start-1 lg:col-end-5 ">
-          <Login />
+          <Register />
         </div>
         {/* Grid cell for Image & Title. Starts at 7th column and ends at 12th on large screens. */}
         <div
@@ -99,4 +97,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default RegisterPage;
