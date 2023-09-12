@@ -13,16 +13,23 @@ import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
+type FormData = {
+  email: string;
+  password?: string;
+  name: string;
+  timestamp?: any;
+};
+
 export function Register() {
   const router = useRouter();
-
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     email: "",
     password: "",
     name: "",
   });
   const { email, password, name } = formData;
+
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFormData((prevState) => ({
       ...prevState,
@@ -37,7 +44,7 @@ export function Register() {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password!
       );
 
       const user = userCredential.user;
@@ -47,7 +54,7 @@ export function Register() {
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       toast.success("Sign up was successful");
-      router.push("https://www.ocomni.com/account");
+      window.location.href = "https://www.ocomni.com/account";
     } catch (error) {
       console.log(error);
       toast.error("There was an error during registration");
