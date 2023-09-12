@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import Link from "next/link";
