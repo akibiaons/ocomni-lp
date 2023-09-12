@@ -11,7 +11,7 @@ import {
 import { db } from "../../lib/firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 export function Register() {
   const router = useRouter();
@@ -47,7 +47,7 @@ export function Register() {
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       toast.success("Sign up was successful");
-      router.push("/");
+      router.push("/success");
     } catch (error) {
       console.log(error);
       toast.error("There was an error during registration");
@@ -60,7 +60,7 @@ export function Register() {
         <div className="flex flex-row items-center ">
           <div className="cursor-pointer border-b-2 border-purple-600 w-full">
             <h3
-              onClick={() => router.push("/")}
+              //onClick={() => router.push("/success")}
               className="uppercase font-bold text-xs text-center mb-3 tracking-wider"
             >
               register
