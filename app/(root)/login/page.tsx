@@ -3,24 +3,26 @@
 import React, { useEffect, useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import OAuth from "../../components/OAuth";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 
 export default function Login() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
   const { email, password } = formData;
-  function onChange(e) {
+  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
   }
-  async function onSubmit(e) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
       const auth = getAuth();
@@ -30,7 +32,7 @@ export default function Login() {
         password
       );
       if (userCredentials.user) {
-        navigate("/");
+        router.push("/");
       }
       toast.success("Sign In Successful.");
     } catch (error) {
