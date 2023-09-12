@@ -47,7 +47,7 @@ export function Register() {
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       toast.success("Sign up was successful");
-      router.push("/success");
+      router.push("https://www.ocomni.com/account");
     } catch (error) {
       console.log(error);
       toast.error("There was an error during registration");
