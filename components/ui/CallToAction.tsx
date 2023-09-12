@@ -50,7 +50,7 @@ export function CallToAction() {
                 Easy to deploy, and starting as low as $5.00 a month.
               </p>
               <button className="border-2 rounded-lg p-4 bg-[#5B45BB] hover:bg-slate-300 hover:text-black text-white mb-12">
-                <Link href="/signup">Select Store Template</Link>
+                <Link href="/register">Select Store Template</Link>
               </button>
             </div>
           </div>
