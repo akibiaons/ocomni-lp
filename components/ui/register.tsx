@@ -11,7 +11,7 @@ import {
 import { db } from "../../lib/firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function Register() {
   const router = useRouter();
