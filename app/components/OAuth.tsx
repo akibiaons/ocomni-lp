@@ -9,12 +9,11 @@ import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import { db } from "../firebase";
+import { db } from "../../lib/firebase";
 import { toast } from "react-toastify";
 
 export default function OAuth() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   async function onGoogleClick() {
     try {
       const auth = getAuth();
@@ -32,7 +31,7 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
       }
-      navigate("/account");
+      //navigate("/account");
     } catch (error) {
       toast.error("Could not authorize with Google");
     }
@@ -54,7 +53,7 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
       }
-      navigate("/account");
+      //navigate("/account");
     } catch (error) {
       toast.error("Could not authorize with Facebook");
       console.log(error);
@@ -77,7 +76,7 @@ export default function OAuth() {
           timestamp: serverTimestamp(),
         });
       }
-      navigate("/account");
+      // navigate("/account");
     } catch (error) {
       toast.error("Could not authorize with Twitter");
       console.log(error);
