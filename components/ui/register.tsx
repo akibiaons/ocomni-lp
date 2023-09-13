@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 //import OAuth from "../components/OAuth";
