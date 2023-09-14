@@ -9,7 +9,7 @@ import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { db } from "../../lib/firebase";
+import { db } from "../lib/firebase";
 import { toast } from "react-toastify";
 
 export default function OAuth() {
