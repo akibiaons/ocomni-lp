@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import OAuth from "../../components/OAuth";
+import OAuth from "../../OAuth";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 
